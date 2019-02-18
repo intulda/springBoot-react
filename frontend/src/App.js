@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
-import './App.css';
+//mport './App.css';
+import TestComponents from "./components/TestComponents";
+import { hot } from 'react-hot-loader'
 
 class App extends Component {
     state = {};
 
     componentDidMount() {
-        setInterval(this.hello, 250);
+        //setInterval(this.hello, 250);
     }
 
     hello = () => {
@@ -20,16 +22,16 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo"/>
-                    <h1 className="App-title">{this.state.message}</h1>
-                </header>
+                <TestComponents/>
+                <div>
+                    {this.state.message}
+                </div>
                 <p className="App-intro">
-                    To get started, edit <code>src/App.js</code> and save to reload.
+                    To get started, edit <code>src/App.js</code> and save to reload.111122333333
                 </p>
             </div>
         );
     }
 }
 
-export default App;
+export default hot(module) (App);

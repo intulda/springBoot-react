@@ -17,10 +17,21 @@
   "eslintConfig": {
     "extends": "react-app"
   },
+  "babel": {
+    "presets": [
+      "react-app"
+    ],
+    "plugins": [
+      "react-hot-loader/babel"
+    ]
+  },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "react-hot-loader": "^4.5.3"
+  }
 }
